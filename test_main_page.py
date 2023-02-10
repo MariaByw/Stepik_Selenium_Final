@@ -15,8 +15,10 @@ def test_basket_shuld_be_visible(browser):
     time.sleep(5)
     assert basket_should_be_present(browser), "Basket element shuld be present."
 
-def test_guest_can_go_to_login_page(browser):
-    link = "http://selenium1py.pythonanywhere.com/"
-    browser.get(link)
+def go_to_login_page(browser):
     login_link = browser.find_element(By.CSS_SELECTOR, "#login_link")
     login_link.click()
+
+def test_guest_can_go_to_login_page(browser):
+    browser.get(link)
+    go_to_login_page(browser)
