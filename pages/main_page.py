@@ -1,12 +1,13 @@
-import self as self
-
 from .base_page import BasePage
-from selenium.webdriver.common.by import By
+
 
 class MainPage(BasePage):
-    def go_to_login_page(self):
-        login_link = self.browser.find_element(By.CSS_SELECTOR, "#login_link")
-        login_link.click()
-
-    def should_be_login_link(self):
-        self.browser.find_element(By.CSS_SELECTOR, "#login_link_invalid")
+    # Заглушка
+    # можно просто pass
+    def __init__(self, *args, **kwargs):
+        """Конструктор вызывает конструктор класса предка и передает ему все те аргументы,
+         которые мы передали в конструктор MainPage
+        :param args:
+        :param kwargs:
+        """
+        super(MainPage, self).__init__(*args, **kwargs)
